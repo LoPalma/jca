@@ -55,7 +55,7 @@ to_func_name() {
 # 2. Emit generated script header + dependency runner
 cat <<'EOF'
 #!/usr/bin/env bash
-set -euo pipefail
+set -e
 
 declare -A _RAN_RULES=()
 
