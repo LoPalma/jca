@@ -52,18 +52,6 @@ to_func_name() {
     printf '_rule_%s' "$name"
 }
 
-if [[ $# == 0 ]]; then
-    echo 'Usage:'
-    echo '    ./jca.sh [-rule:dep[:dep...] "<script to run>"]'
-    echo 'jca prints the generated script to stdout. Redirect the stream to save it into a file:'
-    echo '    ./jca.sh -build "gcc -o main main.c" > compile && chmod +x compile'
-    echo 'Running rules is then as simple as:'
-    echo '    ./compile <rulename>'
-    echo 'Copyright (C) 2024-2026 Leonardo Palma'
-    exit 0
-fi
-
-
 # 2. Emit generated script header + dependency runner
 cat <<'EOF'
 #!/usr/bin/env bash
