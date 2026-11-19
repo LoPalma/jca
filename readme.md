@@ -29,6 +29,12 @@ Will execute `build` as a dependency.
 For longer scripts with user set variables it might be useful to create a `gen.sh` script to
 avoid retyping the whole command.
 
+## Get JCA
+Just `wget` the script from this repo:
+````
+wget -O jca.sh https://raw.githubusercontent.com/LoPalma/jca/main/jca.sh
+````
+
 ## Notes
 
 This is not meant as a make/CMake killer. Not at all! It's just my swiss army knife.
